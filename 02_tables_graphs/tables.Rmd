@@ -1,0 +1,34 @@
+---
+title: "Tables"
+author: "Paloma"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output: html_document 
+
+---
+
+```{r libraries, warning = FALSE, message = FALSE, echo = FALSE}
+library(rio)
+library(dplyr)
+library(tidyr)
+library(kableExtra)
+library(glue)
+```
+
+```{r table , warning = FALSE, message = FALSE, echo = FALSE}
+source("a_results_table.R")
+source("b_results_table.R")
+```
+
+# Stroke results:
+
+```{r warning= FALSE, echo=FALSE}
+data <- import("./results_str.sas7bdat")
+table(data) 
+```
+
+#Stratified analysis:
+```{r warning= FALSE, echo=FALSE}
+table_stroke%>% 
+  kable() %>% 
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed"), font_size = 10)
+```
