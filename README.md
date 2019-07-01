@@ -6,14 +6,14 @@
  
  * R Code for tables and graphs*: 
  
-  - Result tables
+    - Result tables
  
-  - Stratified tables
+    - Stratified tables
  
-  - Predicted vs. Observed graphs
+    - Predicted vs. Observed graphs
  
-  - Survival curves
+    - Survival curves
  
-  - Survival curves for outcome and competing events
+    - Survival curves for outcome and competing events
    
   *The previous functions will use the outputs obtained from the SAS macro, which need to be specified beforehand.
